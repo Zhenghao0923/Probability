@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.5 in]{geometry}
+\usepackage{blindtext}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\begin{document}
+{\LARGE Real Analysis}\\
+\textbf{The underlying space for the real analysis is the set of real numbers}
+\begin{enumerate}
+\item {\large Axioms of real numbers}	
+	\begin{itemize}
+	\item The set $\mathbb{N}$ of Natural Numbers
+		\begin{itemize}
+		\item Peano Axioms
+			\begin{enumerate}
+			\item $1$ belongs to $\mathbb{N}$
+			\item If $n$ belongs to $\mathbb{N}$, then its successor $n+1$ belongs to $\mathbb{N}$
+			\item $1$ is not successor of any elements in $\mathbb{N}$
+			\item If $n$ and $m$ have the same successor, then $n=m$
+			\item \textcolor{red}{A subset of $\mathbb{N}$ which contains $1$, and which contains $n+1$ whenever it contains $n$, must equal $\mathbb{N}$}[\textcolor{blue}{This is the basis of mathematical induction }]
+			\end{enumerate}
+		\end{itemize}
+	\item The set $\mathbb{Q}$ of Rational Numbers
+		\begin{itemize}
+		\item Algebraic Number: A number satisfies a polynomial equation $$c_nx^n+c_{n-1}x^{n-1}+...+c_1x+c_0=0$$ where the coefficients $c_0, c_1,...,c_n \in \mathbb{Z}$, $c_n\not=0$ and $n\geq 1$\\
+		\textbf{Rational number are always algebraic number}
+		\item \textbf{Rational Zeros Theorem}\\
+		Suppose $c_0,...,c_n\in \mathbb{Z}$, and $r\in \mathbb{Q}$ satisfying the polynomial equation
+		\begin{equation}\label{eq:erl}
+		c_nx^n+...c_1x+c_0=0
+\end{equation}		
+	where $n\geq 1$,$c_n\not=0$ and $c_0\not=0$. Let $r=\frac{c}{d}$ where $c$, $d$ are integers having no common factors and $d\not=0$. \\Then $c$ divides $c_0$ and $d$ divides $c_n$\\ \textbf{Remark}: The only rational candidates for solutions of \eqref{eq:erl} have the form $\frac{c}{d}$ where $c$ divides $c_0$ and $d$ divides $c_n$	
+		\\  \textbf{Proof}\\
+		
+		\begin{subequations}	
+		\begin{align}
+		c_n\left(\frac{c}{d}\right)^n+...+c_1\left(\frac{c}{d}\right)+c_0=0 \label{a} \\ 
+		c_nc^n+...+c_1cd^{n-1}+c_0d^n=0 \label{b}		
+		\end{align}
+\end{subequations}				
+			\begin{enumerate}
+		\item Solve \eqref{b} for $c_0d^n$
+		$$c_0d^n=-c\left[c_nc^{n-1}-...-c_1d^{n-1}\right] $$
+		\item Solve \eqref{b} for $c_nc^n$
+		$$c_nc^n=-d\left[c_{n-1}c^{n-1}+...+c_1cd^{n-2}+c_0d^{n-1}\right]$$
+\end{enumerate}		
+\qed
+\item Corollary\\
+Consider the polynomial equation $$x^n+c_{n-1}x^{n-1}+...+c_1x+c_0=0$$ where the coefficients $c_0, ..., c_{n-1}\in \mathbb{Z}$ and $c_0\not=0$. Any rational solution of this equation must be an integer that divides $c_0$
+\item Properties of $\mathbb{Q}$
+	\begin{enumerate}
+	\item \textbf{A1.}\textit{associative laws} $a+(b+c)=(a+b)+c$, $\forall a,b,c$
+	\item \textbf{A2.} \textit{commutative laws}$a+b=b+a$, $\forall a,b$
+	\item\textbf{A3.} $a+0=a$, $\forall a$
+	\item\textbf{A4.} $\forall a$, $\exists -a$ such that $a+(-a)=0$
+	\item\textbf{M1.} \textit{associative laws} $a(bc)=(ab)c$, $\forall a,b,c$
+	\item\textbf{M2.} \textit{commutative laws}$ab=ba$, $ \forall a,b$
+	\item \textbf{M3. } $a\cdot 1=a$ $\forall a$
+	\item\textbf{M4.}$ \forall a\not=0$, $\exists a^{-1}$ such that $ aa^{-1}=1$
+	\item\textbf{DL} \textit{distributive law}$a(b+c)=ab+ac$, $\forall a,b,c$\\
+	\textbf{Remark}: a system that has more than one elements satisfies these nine properties is called a \textbf{filed}
+	\end{enumerate}
+	\item Order structure of $\mathbb{Q}$
+		\begin{enumerate}
+		\item \textbf{O1.} Give $a$ and $b$, either $a\leq  b$ or $b\leq a$
+		\item\textbf{O2.} If $a\leq b$ and $b\leq a$ , then $a=b$
+		\item\textbf{O3.} \textit{transitive law}If $a\leq b$ and $b\leq c$, then $a\leq c$
+		\item\textbf{O4.} If $a\leq b$ then $a+c\leq b+c$
+		\item\textbf{O5.} if $a\leq b$ and $0\leq c$, then $ac\leq bc$
+		\\ \textbf{Remark}: A filed with an ordering satisfying properties $O1$ through $O5$ is called an \textbf{Ordering Filed} 
+\end{enumerate}			
+		\end{itemize}
+		\item The set $\mathbb{R}$ of Real Numbers
+			\begin{itemize}
+			\item
+			\end{itemize}
+		\item The following are consequences of the field properties:
+			\begin{enumerate}
+			\item $a+c=b+c$ $a=b$
+			\item $a\cdot 0=0,\;\forall a$
+			\item $(-a)b=-ab,\;\forall a,b$
+			\item $(-a)(-b)=ab,\;\forall a,b$
+			\item $ac=bc,\; c\not=0$ implies $a=b$
+			\item $ab=0$ implies $a=0$ or $b=0$\\$\forall a,b,c \in \mathbb{R}$
+			\end{enumerate}
+	\begin{proof}
+	\begin{enumerate}
+	\item 
+	\item
+	\item
+	\item
+	\item
+	\item
+	\item
+	\end{enumerate}
+	\end{proof}
+	\item The following are consequences of the properties of an ordered field:\\
+	\begin{enumerate}
+	\item If $a\leq b$ then $-b\leq -a$
+	\item If $a\leq b$ and $c\leq 0$ , then $bc\leq ac$
+	\item If $0\leq a$ and $0\leq b$ then $0\leq ab$
+	\item $\forall a,\; 0\leq a^2$
+	\item $0<1$
+	\item If $0<a$, then $0< a^{-1}$
+	\item If $0<a<b$, then $0<b^{-1}<a^{-1}$
+	\\ $\forall a,b,c\in \mathbb{R}$
+	\end{enumerate}
+	\begin{proof}
+	\begin{enumerate}
+	\item 
+	\end{enumerate}
+	\end{proof}
+	\item \textbf{distance between $a$ and $b$}: $dist(a,b)=|a-b|$
+	\item Theorem
+		\begin{enumerate}
+		\item $|a|\geq 0,\; \forall a\in \mathbb{R}$
+		\item $|ab|=|a|\cdot|b|,\;\forall a,b\in \mathbb{R}$
+		\item $|a+b|\leq |a|+|b|,\;\forall a,b \in \textbf{R}$
+		\end{enumerate}
+		\begin{proof}
+		\begin{enumerate}
+		\item		
+		\item
+		\item
+		\end{enumerate}
+		\end{proof}
+	\end{itemize}
+
+	
+\end{enumerate}
+
+\end{document}
